@@ -44,7 +44,7 @@ namespace Merge2D.Source.Services
 
             Vector2 origin = _cameraProvider.Value.ScreenToWorldPoint(_inputService.MousePosition);
             RaycastResult result = _physicsCaster.Raycast(origin, Constants.InteractiveObjectsLayerValue);
-            
+
             return result.HasHit && result.HitInfo.collider.TryGetComponent(out draggable);
         }
     }

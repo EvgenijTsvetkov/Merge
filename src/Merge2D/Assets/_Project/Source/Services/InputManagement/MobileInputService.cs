@@ -17,8 +17,8 @@ namespace Merge2D.Source.Services
             if (HasTouch() == false)
                 return;
             
-            DetectionPhase();
             GetTouchPosition();
+            DetectionPhase();
         }
 
         private bool HasTouch()
@@ -39,9 +39,6 @@ namespace Merge2D.Source.Services
                 case TouchPhase.Canceled:
                     OnLeftMouseUp?.Invoke();
                     break;
-                
-                default:
-                    throw new ArgumentOutOfRangeException();
             }
         }
 
